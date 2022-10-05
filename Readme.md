@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Taisiya Bogatyreva](https://up.htmlacademy.ru/htmlcss/35/user/2244991).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Козаков] (https://htmlacademy.ru/profile/id798257).
 
 ---
 
