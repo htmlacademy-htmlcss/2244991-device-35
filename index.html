@@ -19,39 +19,42 @@
       </form>
       <!--Навигация-->
       <div class="navigation-yellow">
-      <nav class="user-navigation">
+      <div class="header-navigation">
+       <nav class="user-navigation">
         <ul class="navigation-user-item">
           <li class="navigation-user-list">
             <a class="navigation-link-user" href="#">Войти</a>
           </li>
-          <li class="navigation-user-item">
+          <li class="navigation-user-list">
             <a class="navigation-link-user" href="#">Сравнить</a>
           </li>
-          <li class="navigation-user-item">
+          <li class="navigation-user-list">
             <a class="navigation-link-user" href="#">Корзина</a>
           </li>
         </ul>
-      </nav>
-      <nav class="main-navigation">
+       </nav>
+       <nav class="main-navigation">
         <ul class="navigation-main-item">
-          <li class="navigation-item-link">
+          <li class="navigation-item-list">
             <a class="navigation-link-main" href="catalog-product.html">Каталог товаров</a>
           </li>
-          <li class="navigation-item-link">
+          <li class="navigation-item-list">
             <a class="navigation-link-main" href="delivery.html">Доставка</a>
           </li>
-          <li class="navigation-item-link">
+          <li class="navigation-item-list">
             <a class="navigation-link-main" href="guarantee.html">Гарантия</a>
           </li>
-          <li class="navigation-item-link">
+          <li class="navigation-item-list">
             <a class="navigation-link-main" href="contacts.html">Контакты</a>
           </li>
         </ul>
-      </nav>
+       </nav>
       </div>
+    </div>
     </header>
     <!--слайдер-->
-    <main class="main-index">
+    <main class="main-conteiner main-index">
+      <div class="page-conteiner">
       <h1 class="visually-hidden">Интернет-магазин мобильных гаджетов DeviSe</h1>
       <section class="slider-products">
         <div class="slider-button-arrow">
@@ -70,41 +73,83 @@
         <div class="slider">
         <ul class="slider-item">
           <li class="slider-quadrocopter">
-            <img class="quadrocopter.image" src="images/slider/slider-quadrocopter.png" width="560" height="560" alt="квадракоптер">
+          <div class="slider-number-container">
             <p class="slider-number">01</p>
+          </div>
+          <div class="slider-container">
+          <div class="slider-image-container">
+            <img class="quadrocopter.image" src="images/slider/slider-quadrocopter.png" width="560" height="560" alt="квадракоптер">
+          </div>
+          <div class="slider-text-container">
             <h2 class="slider-title">Порхает как бабочка,
               жалит как пчела!</h2>
             <p class="slider-title-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
               замаскированным под стандартную камеру.</p>
             <a class="slider-quadrocopter-more" href="#">Подробнее</a>
+            <div class="slider-data-container">
+            <div class="slider-data-meaning">
             <p class="slider-data-number">800 m</p>
             <p class="slider-title-description">Дальность полета</p>
+            </div>
+            <div class="slider-data-meaning">
             <p class="slider-data-number">50 m</p>
             <p class="slider-title-description">Радиус поражения</p>
+            </div>
+            </div>
+          </div>
+          </div>
           </li>
           <li class="slider-fitness-bracelet">
-            <img class="fitness-bracelet.image" src="images/slider/slider-fitness-bracelet.png" width="560" height="560" alt="Фитнес-браслет">
+          <div class="slider-number-container">
             <p class="slider-number">02</p>
+          </div>
+          <div class="slider-container">
+          <div class="slider-image-container">
+            <img class="fitness-bracelet.image" src="images/slider/slider-fitness-bracelet.png" width="560" height="560" alt="Фитнес-браслет">
+          </div>
+          <div class="slider-text-container">
             <h2 class="slider-title">Худеем Правильно!</h2>
             <p class="slider-title-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
               занятия и соблюдать диету.</p>
             <a class="slider-fitness-bracelet-more" href="#">Подробнее</a>
+            <div class="slider-data-container">
+            <div class="slider-data-meaning">
             <p class="slider-data-number">48 часов</p>
             <p class="slider-title-description">Без подзарядки</p>
+            </div>
+            </div>
+            </div>
+            </div>
           </li>
           <li class="slider-selfie-stick">
+            <div class="slider-number-container">
+              <p class="slider-number">03</p>
+            </div>
+            <div class="slider-container">
+            <div class="slider-image-container">
             <img class="selfie-stick.image" src="images/slider/slider-salfie-stick.png" width="560" height="560" alt="Селфи-палка">
-            <p class="slider-number">03</p>
+            </div>
+            <div class="slider-text-container">
             <h2 class="slider-title">Делай селфи,как Бен Стиллер!</h2>
             <p class="slider-title-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
               Карл!) метров длиной и весом всего 5 кг.</p>
             <a class="slider-selfie-stick-more" href="#">Подробнее</a>
+            <div class="slider-data-container">
+            <div class="slider-data-meaning">
             <p class="slider-data-number">8.5 m</p>
             <p class="slider-title-description">Длина палки</p>
+            </div>
+            <div class="slider-data-meaning">
             <p class="slider-data-number">5 кг</p>
             <p class="slider-title-description">Вес палки</p>
+            </div>
+            <div class="slider-data-meaning">
             <p class="slider-data-number">Карбон</p>
             <p class="slider-title-description">Материал</p>
+            </div>
+            </div>
+            </div>
+            </div>
           </li>
         </ul>
         </div>
@@ -162,8 +207,10 @@
       </section>
       <!--доставим редкий товар-->
       <section class="rare-product">
+        <div class="rare-product-container">
         <h2 class="visually-hidden">Доставка редких товаров под заказ</h2>
         <a class="rare-product-button" href="#">Доставим редкий товар под заказ</a>
+        </div>
       </section>
       <!--о нас и контакты-->
       <div class="about-us-contacts">
@@ -199,28 +246,48 @@
       </div>
       <!--Подписка на рассылку-->
       <section class="subscribe">
+        <div class="subscribe-container-title">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+        </div>
+        <div class="subscribe-container-text">
         <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
           длительными тест-драйвами, распаковками, а также акции,
           спецпредложения и вот это вот всё.</p>
+        </div>
+        <div class="subscribe-container-form">
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input name="subscribe-form-signature" placeholder="Ваш email">
           <button class="button-subscribe-form" type="button">Подписаться</button>
           <p class="subscribe-form-is-free">Это бесплатно</p>
         </form>
+        </div>
       </section>
+      </div>
     </main>
     <!--Подвал-->
-    <footer class="footer-page">
-      <a class="header-logo-link" href="index.html">
+    <footer>
+     <div class="footer-page">
+      <div class="page-footer-container">
+      <div class="logo-adress-container">
+      <div class="logo-link-container">
+      <a class="footer-logo-link" href="index.html">
         <img class="footer-logo" src="images/logo-yellow.svg" width="145" height="36" alt="логотип интернет-магазина Devise">
       </a>
+      </div>
+      <div class="footer-adress-conteiner">
       <address class="footer-address">
         Санкт-Петербург, набережная реки Карповки, 5, литера П.
       </address>
+      </div>
+      </div>
       <section class="footer-contacts">
-        <h2 class="visually-hidden">Контакты и социальные сети</h2>
+        <div class="footer-visually-hidden-container">
+        <!--Временно добавим атрибут hidden
+        <h2 class="visually-hidden">Контакты и социальные сети</h2> -->
+        </div>
+        <div class="footer-contacts-container">
         <ul class="footer-navigation">
+          <div class="footer-contacts-container">
           <li class="footer-navigation-item">
             <a class="footer-navigation-link" href="delivery.html">Доставка</a>
           </li>
@@ -230,6 +297,8 @@
           <li class="footer-navigation-item">
             <a class="footer-navigation-link" href="contacts.html">Контакты</a>
         </ul>
+        </div>
+        <div class="footer-social-conteiner">
         <ul class="footer-social-list">
           <li class="footer-sotial-item">
             <a class="button" href="images/icons-telegram.svg" width="14" height="12" alt="telegram">
@@ -247,13 +316,18 @@
             </a>
           </li>
         </ul>
+        </div>
       </section>
+      <div class="footer-phone-logo-conteiner">
       <address class="footer-contscts-phone">
         <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
       </address>
       <a class="footer-logo-htmlacademy" href="https://htmlacademy.ru/">
         <img class="logo-htmlacademy" src="images/logo-htmlacademy.svg" width="115" height="33" alt="логотип htmlacademy">
       </a>
+      </div>
+    </div>
+    </div>
     </footer>
   </body>
 
