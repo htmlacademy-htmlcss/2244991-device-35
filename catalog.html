@@ -10,24 +10,23 @@
   <body>
     <!--Шапка-->
     <header class="page-header">
-      <a class="header-logo-link" href="index.html">
-        <img class="header-logo" src="images/logo-black.svg" width="145" height="36"
-          alt="логотип интернет-магазина Devise">
-      </a>
-      <!--Навигация-->
-      <div class="navigation-yellow">
+      <div class="header-logo-navigation-container">
+        <div class="header-logo-container">
+          <a class="header-logo-link" href="index.html">
+            <img class="header-logo" src="images/logo-black.svg" width="145" height="36"
+              alt="логотип интернет-магазина Devise">
+          </a>
+        </div>
+        <!--Навигация-->
         <div class="header-navigation">
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input name="search-form-signature" placeholder="Поиск по сайту">
+            <button class="button-search-form" type="button">Найти</button>
+          </form>
           <nav class="user-navigation">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input name="search-form-signature" placeholder="Поиск по сайту">
-              <button class="button-search-form" type="button">Найти</button>
-            </form>
             <ul class="navigation-user-list">
               <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">Коля Петухов</a>
-              </li>
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">Выйти</a>
+                <a class="navigation-link-user" href="#">Войти</a>
               </li>
               <li class="navigation-user-item">
                 <a class="navigation-link-user" href="#">Сравнить</a>
@@ -37,48 +36,46 @@
               </li>
             </ul>
           </nav>
-          <nav class="main-navigation">
-            <ul class="navigation-main-list">
-              <li class="navigation-main-item">
-                <a class="navigation-link-main" href="catalog-product.html">Каталог товаров</a>
-              </li>
-              <li class="navigation-main-item">
-                <a class="navigation-link-main" href="delivery.html">Доставка</a>
-              </li>
-              <li class="navigation-main-item">
-                <a class="navigation-link-main" href="guarantee.html">Гарантия</a>
-              </li>
-              <li class="navigation-main-item">
-                <a class="navigation-link-main" href="contacts.html">Контакты</a>
-              </li>
-            </ul>
-          </nav>
         </div>
+        <nav class="main-navigation">
+          <ul class="navigation-main-list">
+            <li class="navigation-main-item">
+              <a class="navigation-link-main" href="catalog-product.html">Каталог товаров</a>
+            </li>
+            <li class="navigation-main-item">
+              <a class="navigation-link-main" href="delivery.html">Доставка</a>
+            </li>
+            <li class="navigation-main-item">
+              <a class="navigation-link-main" href="guarantee.html">Гарантия</a>
+            </li>
+            <li class="navigation-main-item">
+              <a class="navigation-link-main" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <!--интернет-магазин-->
     <main class="main-conteiner main-inner">
       <div class="page-conteiner">
-        <!--Временно добавим атрибут hidden
-      <h1 class="visually-hidden">Интернет-магазин мобильных гаджетов DeviSe</h1>
-      <header class="inner-header"> -->
-        <h1 class="inner-header-title">Моноподы для селфи</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href=""> Главная</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="">Каталог</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
-          </li>
-        </ul>
+        <h1 class="visually-hidden">Интернет-магазин мобильных гаджетов DeviSe</h1>
+        <header class="inner-header">
+          <h1 class="inner-header-title">Моноподы для селфи</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href=""> Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="">Каталог</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Моноподы для селфи</a>
+            </li>
+          </ul>
         </header>
         <!--Фильтры каталога товаров-->
         <section class="catalog-product">
-          <!--Временно добавим атрибут hidden
-        <h2 class="visually-hidden">Список товаров с фильтрами</h2> -->
+          <h2 class="visually-hidden">Список товаров с фильтрами</h2>
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Цвет</legend>
@@ -115,7 +112,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">bluetooth</legend>
               <ul class="catalog-filter-list">
@@ -136,17 +132,19 @@
             <button class="button-catalog" type="submit">Показать</button>
           </form>
           <!--сортировка каталога товаров-->
-          <div class="catalog-right-columb">
-            <h2 class="celect-name">Сортировка</h2>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="popular">Популярные</option>
-            </select>
-            <button class="button-product" type="button">
-              <span class="visually-hidden">Сначала более популярное</span>
-            </button>
-            <button class="button-product" type="button">
-              <span class="visually-hidden">Менее популярное</span>
-            </button>
+          <div class="catalog-right-column">
+            <div class="catalog-right-menu-container">
+              <h2 class="celect-name">Сортировка</h2>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular">Популярные</option>
+              </select>
+              <button class="button-product" type="button">
+                <span class="visually-hidden">Сначала более популярное</span>
+              </button>
+              <button class="button-product" type="button">
+                <span class="visually-hidden">Менее популярное</span>
+              </button>
+            </div>
             <!--карточки товаров-->
             <div class="product-card">
               <ul class="product-card-list">
@@ -186,12 +184,10 @@
               <button class="button-product-card-show-more" type="button">Загрузить ещё</button>
               <!--Нумерация страниц-->
               <div class="pagination">
+                <a class="pagination-prev" href="#">
+                  <span class="pagination-text-prev">Назад</span>
+                </a>
                 <ul class="pagination-list">
-                  <li class="pagination-item">
-                    <a class="pagination-link pagination-prev" href="#">
-                      <span class="pagination-text-prev">Назад</span>
-                    </a>
-                  </li>
                   <li class="pagination-item">
                     <a class="pagination-link" href="#">1</a>
                   </li>
@@ -207,12 +203,10 @@
                   <li class="pagination-item">
                     <a class="pagination-link" href="#">15</a>
                   </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link pagination-next" href="#">
-                      <span class="pagination-text-next">Вперёд</span>
-                    </a>
-                  </li>
                 </ul>
+                <a class="pagination-next" href="#">
+                  <span class="pagination-text-next">Вперёд</span>
+                </a>
               </div>
             </div>
           </div>
@@ -237,8 +231,7 @@
         </div>
         <section class="footer-contacts">
           <div class="footer-visually-hidden-container">
-            <!--Временно добавим атрибут hidden
-      <h2 class="visually-hidden">Контакты и социальные сети</h2> -->
+            <h2 class="visually-hidden">Контакты и социальные сети</h2>
           </div>
           <div class="footer-contacts-container">
             <ul class="footer-navigation">
@@ -257,25 +250,25 @@
             <ul class="footer-social-list">
               <li class="footer-sotial-item">
                 <a class="button" href="images/icons-telegram.svg" width="14" height="12" alt="telegram">
-                  <span class="visually hidden">Телеграм</span>
+                  <span class="visually-hidden">Телеграм</span>
                 </a>
               </li>
               <li class="footer-sotial-item">
                 <a class="button" href="images/icons-youtube.svg" width="16" height="11" alt="youtube">
-                  <span class="visually hidden">Ютуб</span>
+                  <span class="visually-hidden">Ютуб</span>
                 </a>
               </li>
               <li class="footer-sotial-item">
                 <a class="button" href="images/icon-twitter.svg" width="15" height="15" alt="twitter">
-                  <span class="visually hidden">Твиттер</span>
+                  <span class="visually-hidden">Твиттер</span>
                 </a>
               </li>
             </ul>
           </div>
         </section>
         <div class="footer-phone-logo-conteiner">
-          <address class="footer-contscts-phone">
-            <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+          <address class="footer-contacts-phone">
+            <a class="footer-contacts-phone-link" href="tel:88128121212">+7 (812) 812-12-12</a>
           </address>
           <a class="footer-logo-htmlacademy" href="https://htmlacademy.ru/">
             <img class="logo-htmlacademy" src="images/logo-htmlacademy.svg" width="115" height="33"
@@ -283,7 +276,7 @@
           </a>
         </div>
       </div>
-  </footer>
+    </footer>
   </body>
 
 </html>
