@@ -335,7 +335,6 @@ body {
   margin: 0;
   padding: 0;
   margin: 0 auto;
-
 }
 
 .slider-service-list {
@@ -607,13 +606,23 @@ body {
 
 /*catalog*/
 
-.catalog-product {
+.catalog-product-container {
   background: #F0F0F0;
+  margin: 0 auto;
+}
+
+.catalog-product {
   display: flex;
+  margin: 0 auto;
+  width: 1160px;
 }
 
 .catalog-filter-group {
  width: 320px;
+}
+
+.catalog-filter-form {
+  background: #F0F0F0;
 }
 
 .catalog-filter-title {
@@ -643,13 +652,13 @@ body {
 }
 
 .catalog-right-column {
-  display: grid;
   width: 840px;
+  background: #FFFFFF;
 }
 
 .catalog-right-menu-container {
   display: flex;
-  width: 840px;
+  background: #F0F0F0;
 }
 
 .celect-name {
@@ -741,7 +750,6 @@ body {
   display: grid;
   grid-template-columns: 360px 360px;
   list-style-type: none;
-  margin: 0;
   padding: 0;
   gap: 44px 40px;
   margin: 70px 40px 44px 40px;
