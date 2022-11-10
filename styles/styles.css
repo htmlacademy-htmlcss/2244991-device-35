@@ -60,7 +60,6 @@ body {
   display: flex;
   justify-content: flex-end;
   width: 1160px;
-  margin-right: 60px;
 }
 
 .header-logo-navigation-container {
@@ -71,7 +70,8 @@ body {
   background-color: #FFE17F;
   }
 
-.navigation-main-list, .navigation-user-list {
+.navigation-main-list,
+.navigation-user-list {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -80,22 +80,39 @@ body {
   list-style-type: none;
 }
 
+.navigation-user-list {
+  margin-top: 66px;
+  margin-right: 26px;
+}
+
+.navigation-main-list {
+  margin-bottom: 45px;
+  margin-right: 45px;
+}
+
 .navigation-user-item:nth-child(1) {
   min-width: 231px;
 }
 
 .navigation-main-item:nth-child(1) {
- margin-right: 333px;
+ margin-right: auto;
+ margin-left: 60px;
 }
 
-.navigation-link-user {
+.navigation-user-item {
   display: block;
-  margin-top: 66px;
-  margin-right: 26px;
-  color: #000000;
   background-color: #FFE17F;
   font-weight: 400;
   text-align: left;
+  margin-right: 26px;
+}
+
+.navigation-user-itemm:nth-child(3) {
+  margin-right: 0px;
+}
+
+.navigation-link-user {
+  color: #000000;
   text-decoration: none;
 }
 
@@ -112,17 +129,24 @@ body {
 }
 
 .navigation-link-main {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.navigation-main-item {
   display: block;
-  margin-bottom: 45px;
-  margin-right: 45px;
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   font-weight: 800;
-  color: #000000;
   background-color: #FFE17F;
   text-align: left;
-  text-decoration: none;
-  text-transform: uppercase;
+  margin-right: 45px;
+}
+
+
+.navigation-main-item:nth-child(4) {
+  margin-right: 0px;
 }
 
 .main-navigation {
@@ -191,10 +215,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 0 auto;
   padding: 0;
-  margin-right: 40px;
-
 }
 
 .slider-number-container {
@@ -232,7 +253,6 @@ body {
 
 .slider-data-meaning {
   width: 160px;
-  height: 72px;
 }
 
 .slider-title {
@@ -258,7 +278,9 @@ body {
 
 /*slider link*/
 
-.slider-quadrocopter-more, .slider-fitness-bracelet-more, .slider-selfie-stick-more {
+.slider-quadrocopter-more,
+.slider-fitness-bracelet-more,
+.slider-selfie-stick-more {
   color: #000000;
   background-color: #FFFFFF;
   text-decoration: none;
@@ -810,7 +832,8 @@ body {
   text-decoration: none;
 }
 
-.footer-address, .footer-contacts-phone-link {
+.footer-address,
+.footer-contacts-phone-link {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -824,16 +847,14 @@ body {
 
 .logo-adress-container {
  width: 250px;
- min-height: 182px;
- display: flex;
- justify-self: start;
- flex-direction: column;
 }
 
-.footer-contacts-container {
+.footer-navigation {
  display: flex;
- justify-content: space-between;
- text-decoration: none;
+ justify-content: center;
+ margin: 0;
+ padding: 0;
+ margin-top: 137px;
 }
 
 .footer-phone-logo-conteiner {
