@@ -134,16 +134,18 @@
           <!--сортировка каталога товаров-->
           <div class="catalog-right-column">
             <div class="catalog-right-menu-container">
-              <h2 class="celect-name">Сортировка</h2>
+              <h2 class="celect-name">Сортировка:</h2>
               <select class="select-control" aria-label="Сортировка">
                 <option value="popular">Популярные</option>
               </select>
-              <button class="button-product" type="button">
-                <span class="visually-hidden">Сначала более популярное</span>
-              </button>
-              <button class="button-product" type="button">
-                <span class="visually-hidden">Менее популярное</span>
-              </button>
+              <div class="button-product-container">
+                <button class="button-product" type="button">
+                  <span class="visually-hidden">Сначала более популярное</span>
+                </button>
+                <button class="button-product" type="button">
+                  <span class="visually-hidden">Менее популярное</span>
+                </button>
+              </div>
             </div>
             <!--карточки товаров-->
             <div class="product-card">
@@ -233,33 +235,33 @@
           <div class="footer-visually-hidden-container">
             <h2 class="visually-hidden">Контакты и социальные сети</h2>
           </div>
-          <div class="footer-contacts-container">
-            <ul class="footer-navigation">
-              <div class="footer-contacts-container">
-                <li class="footer-navigation-item">
-                  <a class="footer-navigation-link" href="delivery.html">Доставка</a>
-                </li>
-                <li class="footer-navigation-item">
-                  <a class="footer-navigation-link" href="guarantee.html">Гарантия</a>
-                </li>
-                <li class="footer-navigation-item">
-                  <a class="footer-navigation-link" href="contacts.html">Контакты</a>
-            </ul>
-          </div>
+          <ul class="footer-navigation">
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="delivery.html">Доставка</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="guarantee.html">Гарантия</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="contacts.html">Контакты</a>
+          </ul>
           <div class="footer-social-conteiner">
             <ul class="footer-social-list">
               <li class="footer-sotial-item">
-                <a class="button" href="images/icons-telegram.svg" width="14" height="12" alt="telegram">
+                <a class="button" href="tg://resolve?domain=htmlacademy">
+                  <img class="footer-sotial-img" src="images/icons-telegram.svg" width="14" height="12" alt="telegram">
                   <span class="visually-hidden">Телеграм</span>
                 </a>
               </li>
               <li class="footer-sotial-item">
-                <a class="button" href="images/icons-youtube.svg" width="16" height="11" alt="youtube">
+                <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+                  <img class="footer-sotial-img" src="images/icons-youtube.svg" width="16" height="11" alt="youtube">
                   <span class="visually-hidden">Ютуб</span>
                 </a>
               </li>
               <li class="footer-sotial-item">
-                <a class="button" href="images/icon-twitter.svg" width="15" height="15" alt="twitter">
+                <a class="button" href="https://twitter.com/htmlacademy_ru">
+                  <img class="footer-sotial-img" src="images/icon-twitter.svg" width="15" height="15" alt="twitter">
                   <span class="visually-hidden">Твиттер</span>
                 </a>
               </li>
