@@ -126,6 +126,7 @@ body {
   text-decoration: none;
   margin-top: 66px;
   min-width: 517px;
+  margin-right: 26px;
 }
 
 .navigation-link-main {
@@ -207,15 +208,12 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
   flex-direction: column;
 }
 
 .slider-container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0;
+
 }
 
 .slider-number-container {
@@ -325,13 +323,19 @@ body {
 
 /*slider-service*/
 
+.slider-servise-container {
+  background-color: #F0F0F0;
+  margin-bottom: 70px;
+}
+
 .slider-service {
   display: flex;
   justify-content: space-between;
   width: 1160px;
   margin: 0;
   padding: 0;
-  margin-bottom: 70px;
+  margin: 0 auto;
+
 }
 
 .slider-service-list {
@@ -501,7 +505,6 @@ body {
 .subscribe-container {
   display: flex;
   justify-content: center;
-  width: 1440px;
   min-height: 421px;
   background-color:#F0F0F0;
   margin: 0 auto;
@@ -509,12 +512,9 @@ body {
 
 .subscribe {
   display: flex;
-  justify-content: center;
   width: 1160px;
-  margin: 0 auto;
   flex-wrap: wrap;
   background-color:#F0F0F0;
-
 }
 
 .subscribe-title {
@@ -548,9 +548,8 @@ body {
 .subscribe-form {
   width: 810px;
   min-height: 57px;
-  margin-left: 133px;
   margin-top: 144px;
-
+  margin-right: 144px;
 }
 
 .button-subscribe-form {
@@ -644,12 +643,12 @@ body {
 }
 
 .catalog-right-column {
+  display: grid;
   width: 840px;
 }
 
 .catalog-right-menu-container {
   display: flex;
-  justify-content: flex-start;
   width: 840px;
 }
 
@@ -732,21 +731,26 @@ body {
   text-transform: uppercase;
   color: #000000;
   background: #FFFFFF;
+  min-width: 760px;
+  min-height: 52px;
+  margin-bottom: 44px;
+  margin-left: 40px;
 }
 
 .product-card-list {
+  display: grid;
+  grid-template-columns: 360px 360px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  gap: 44px 40px;
+  margin: 70px 40px 44px 40px;
 }
 
 /*pagination*/
 
 .pagination {
   display: flex;
-  justify-content: space-between;
-  width: 760px;
-  height: 71px;
   background: #EBEBEB;
 }
 
@@ -789,6 +793,7 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+  width: 250px;
 }
 
 .pagination-next {
@@ -798,16 +803,14 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+  width: 250px;
+  text-align: end;
 }
 
 /*footer*/
 
 .footer-contacts {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 444px;
-  min-height: 123px;
+ margin-top: 137px;
 }
 
 .footer-page {
@@ -818,7 +821,6 @@ body {
 .page-footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 1140px;
   min-height: 321px;
   margin: 0 auto;
@@ -847,6 +849,7 @@ body {
 
 .logo-adress-container {
  width: 250px;
+ margin-top: 62px;
 }
 
 .footer-navigation {
@@ -854,7 +857,6 @@ body {
  justify-content: center;
  margin: 0;
  padding: 0;
- margin-top: 137px;
 }
 
 .footer-phone-logo-conteiner {
@@ -868,6 +870,9 @@ body {
   display: flex;
  justify-content: center;
  flex-wrap: wrap;
+ margin: 0;
+ padding: 0;
+ margin-top: 62px;
 
 }
 
