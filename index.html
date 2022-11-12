@@ -11,12 +11,10 @@
     <!--Шапка-->
     <header class="page-header">
       <div class="header-logo-navigation-container">
-        <div class="header-logo-container">
           <a class="header-logo-link" href="index.html">
             <img class="header-logo" src="images/logo-black.svg" width="145" height="36"
               alt="логотип интернет-магазина Devise">
           </a>
-        </div>
         <!--Навигация-->
         <div class="header-navigation">
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -25,14 +23,15 @@
           </form>
           <nav class="user-navigation">
             <ul class="navigation-user-list">
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">Войти</a>
+              <li class="navigation-user-item navigation-user-item-enter">
+                <a class="navigation-link-user navigation-link-user-enter" href="#">Войти</a>
               </li>
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">Сравнить</a>
+              <li class="navigation-user-item navigation-user-item-compare">
+                <a class="navigation-link-user navigation-link-user-compare" href="#">Сравнить</a>
               </li>
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">Корзина</a>
+              <li class="navigation-user-item navigation-user-item-basket">
+                <a class="navigation-link-user navigation-link-user-basket" href="#">
+                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>Корзина</a>
               </li>
             </ul>
           </nav>
@@ -76,9 +75,6 @@
           <div class="slider">
             <ul class="slider-item">
               <li class="slider-quadrocopter">
-                <div class="slider-number-container">
-                  <p class="slider-number">01</p>
-                </div>
                 <div class="slider-container">
                   <img class="quadrocopter.image" src="images/slider/slider-quadrocopter.png" width="560" height="560"
                     alt="квадракоптер">
@@ -103,9 +99,6 @@
                 </div>
               </li>
               <li class="slider-fitness-bracelet">
-                <div class="slider-number-container">
-                  <p class="slider-number">02</p>
-                </div>
                 <div class="slider-container">
                   <img class="fitness-bracelet.image" src="images/slider/slider-fitness-bracelet.png" width="560"
                     height="560" alt="Фитнес-браслет">
@@ -125,9 +118,6 @@
                 </div>
               </li>
               <li class="slider-selfie-stick">
-                <div class="slider-number-container">
-                  <p class="slider-number">03</p>
-                </div>
                 <div class="slider-container">
                   <img class="selfie-stick.image" src="images/slider/slider-salfie-stick.png" width="560" height="560"
                     alt="Селфи-палка">
@@ -162,22 +152,22 @@
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <a class="catalog-image-link" href="#">Визуальная ральность</a>
+              <a class="catalog-image-link catalog-image-link-virtual" href="#">Визуальная ральность</a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-image-link" href="#">Моноподы для Селфи</a>
+              <a class="catalog-image-link catalog-image-link-monopods" href="#">Моноподы для Селфи</a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-image-link" href="#">Экшн-Камера</a>
+              <a class="catalog-image-link catalog-image-link-camera" href="#">Экшн-Камера</a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-image-link" href="#">Фитнес-браслеты</a>
+              <a class="catalog-image-link catalog-image-link-bracelet" href="#">Фитнес-браслеты</a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-image-link" href="#">Умные часы</a>
+              <a class="catalog-image-link catalog-image-link-smartwatch" href="#">Умные часы</a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-image-link" href="#">Квадракоптеры</a>
+              <a class="catalog-image-link catalog-image-link-quadrocopter" href="#">Квадракоптеры</a>
             </li>
           </ul>
         </section>
@@ -197,13 +187,13 @@
                 к вашему подъезду совершенно бесплатно! Ведь
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="slider-service-filling-item">
+            <li class="slider-service-filling-item visually-hidden">
               <h3 class="slider-service-title">Гарантия</h3>
               <p class="slider-service-discription">Если из-за возгорания купленного у нас товара у вас
                 сгорит дом — не переживайте, мы выдадим вам новый.
                 Товар, не дом, конечно же.</p>
             </li>
-            <li class="slider-service-filling-item">
+            <li class="slider-service-filling-item visually-hidden">
               <h3 class="slider-service-title">Кредит</h3>
               <p class="slider-service-discription">Залезть в долговую яму стало проще! Кредитные консультанты подберут
                 для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
