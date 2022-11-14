@@ -1422,7 +1422,30 @@ background: #FFCC33;
   z-index: -1;
 }
 
-.product-card:hover .product-link {
+.product-card-amateur:hover .product-link {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.product-card-professional:hover .product-link {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.product-card-waterproof:hover .product-link {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.product-card-follow-me:hover .product-link {
   display: block;
   position: absolute;
   top: 170px;
@@ -1638,7 +1661,6 @@ background: #FFCC33;
  margin: 0;
  padding: 0;
  margin-top: 62px;
-
 }
 
 .footer-sotial-item {
