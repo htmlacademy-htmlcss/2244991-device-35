@@ -186,7 +186,7 @@ right: 5px;
 }
 
 .navigation-user-item:nth-child(1) {
-  min-width: 200px;
+  min-width: 193px;
 }
 
 .navigation-main-item:nth-child(1) {
@@ -206,13 +206,17 @@ right: 5px;
   width: 50px;
   height: 50px;
   top: -15px;
-  left: 10px;
+  left: 17px;
+}
+
+.navigation-circle-svg {
+  position: absolute;
+  top: 15px;
 }
 
 .navigation-link-main-left {
   border: none;
   outline: none;
-
 }
 
 .navigation-link-main-left:focus {
@@ -221,8 +225,8 @@ right: 5px;
 
 .navigation-user-item {
   margin-right: 20px;
-  margin-left: 15px;
-  margin-top: 10px;
+  margin-left: 31px;
+  margin-top: 6px;
 }
 
 .navigation-user-item:nth-child(3) {
@@ -321,7 +325,7 @@ right: 5px;
 }
 
 .main-navigation {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .main-navigation-second-pade {
@@ -339,7 +343,7 @@ right: 5px;
   top: 59px;
   left: -60px;
   z-index: 1;
-  display: none;
+  display: grid;
   box-sizing: border-box;
   column-gap: 28px;
   row-gap: 6px;
@@ -349,6 +353,10 @@ right: 5px;
   padding: 0 0 51px 60px;
   background-color: rgba(255, 225, 127, 1);
   list-style-type: none;
+}
+
+.subcatalog-hide {
+  display: none;
 }
 
 .navigation-link-main-left-close-button {
@@ -395,6 +403,8 @@ right: 5px;
 .slider-products {
   margin-bottom: 70px;
   display: grid;
+  margin-top: -16px;
+  position: inherit;
 }
 
 .slider {
@@ -408,7 +418,7 @@ right: 5px;
   margin-left: 20px;
   width: 100%;
   left: 10px;
-  top: 36%;
+  top: 43%;
   transform: translateY(-50%);
 }
 
@@ -457,6 +467,9 @@ right: 5px;
 
 .slider-button-circular {
   margin: 0 auto;
+  position: absolute;
+  left: 828px;
+  bottom: 217px;
 }
 
 .button-circular:hover {
@@ -499,6 +512,10 @@ right: 5px;
   flex-direction: column;
 }
 
+.slider-item li + li {
+  display: none
+}
+
 .slider-container {
   display: flex;
 
@@ -523,7 +540,7 @@ right: 5px;
 .slider-text-container{
   width: 560px;
   height: 401px;
-  margin: 119px 0 0 40px;
+  margin: 124px 0 0 40px;
   padding: 0;
 }
 
@@ -606,7 +623,8 @@ right: 5px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
-  padding: 10px 30px;
+  letter-spacing: 0.2em;
+  padding: 14px 36px;
   margin-bottom: 60px;
 }
 
@@ -660,18 +678,16 @@ right: 5px;
   line-height: 30px;
   color: #000000;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 58px;
   margin-bottom: 12px;
 }
 
 .slider-fitness-bracelet {
   position: relative;
-  display: none;
 }
 
 .slider-selfie-stick {
   position: relative;
-  display: none;
 }
 
 /*catalog*/
@@ -717,12 +733,14 @@ right: 5px;
   background-position: center;
 }
 
+
 .catalog-image-link-virtual::before {
   background-image: url('../images/catalog/virtual-reality.svg');
 }
 
 .catalog-image-link-monopods::before {
   background-image: url('../images/catalog/monopod.svg');
+  background-position: bottom;
 }
 
 .catalog-image-link-camera::before {
@@ -764,7 +782,7 @@ right: 5px;
 /*slider-service*/
 
 .slider-servise-container {
-  margin-bottom: 70px;
+  margin-bottom: 140px;
   background-color: #F0F0F0;
 }
 
@@ -779,10 +797,10 @@ right: 5px;
 .slider-service::after {
   content: '';
   position: absolute;
-  left: 275px;
-  top: -60px;
+  left: 280px;
+  top: -92px;
+  height: 319px;
   width: 0;
-  height: 100%;
   border-right: 7px solid #000000;
 }
 
@@ -794,13 +812,14 @@ right: 5px;
   width: 287px;
   margin: 0;
   padding: 0;
-  margin-top: -100px;
+  margin-top: -60px;
   padding-right: 116px;
 }
 
 .slider-service-button {
   position: relative;
   display: flex;
+  justify-content: center;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -816,6 +835,15 @@ right: 5px;
   text-transform: uppercase;
   margin-bottom: 35px;
   padding: 10px 4px;
+}
+
+.slider-service-button-choose {
+  display: flex;
+  height: 40px;
+  width: 280px;
+  color: #FFE17F;
+  background-color: #000000;
+  padding: 10px 105px 10px 35px;
 }
 
 .slider-service-button::before {
@@ -838,7 +866,6 @@ right: 5px;
   background-color: #000000;
   padding: 10px 105px 10px 35px;
 }
-
 
 .slider-service-button:active {
   width: 280px;
@@ -863,13 +890,14 @@ right: 5px;
   color: #000000;
   margin: 0;
   padding: 0;
+
 }
 
 .slider-service-filling {
   position: relative;
   margin: 0;
   padding: 0;
-  margin: -25px 63px 73px 116px;
+  margin: -16px 61px 73px 118px
 }
 
 .slider-service-filling::after {
@@ -877,8 +905,8 @@ right: 5px;
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 10px;
-  left: 550px;
+  top: 3px;
+  left: 557px;
   background-image: url(../images/slider-service/delivery-man.svg);
   background-repeat: no-repeat;
 }
@@ -1034,7 +1062,7 @@ right: 5px;
 .about-us-transport-companies {
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .about-us-contacts-phone {
@@ -1046,6 +1074,15 @@ right: 5px;
   padding: 0;
   margin-top: 30px;
   margin-bottom: 15px;
+  font-family: 'Rubik';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 24px;
+ line-height: 30px;
+}
+
+.contacts-adress-text {
+  margin: 0;
 }
 
 .contacts-schedule {
@@ -1068,6 +1105,7 @@ right: 5px;
   border: none;
   color: #000000;
   background-color: transparent;
+  letter-spacing: 0.2em;
 }
 
 .button-about-us {
@@ -1078,6 +1116,7 @@ right: 5px;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 30px;
+  letter-spacing: 0.2em;
 }
 
 .button-about-us::before,
@@ -1156,6 +1195,7 @@ background: #FFCC33;
   padding: 0;
   margin-top: 64px;
   margin-bottom: 144;
+  margin-left: 8px;
 }
 
 .subscribe-description {
@@ -1163,8 +1203,8 @@ background: #FFCC33;
   min-height: 90px;
   margin: 0;
   padding: 0;
-  margin-top: 64px;
-  margin-left: 252px;
+  margin-top: 72px;
+  margin-left: 244px;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
@@ -1204,6 +1244,8 @@ background: #FFCC33;
   min-height: 57px;
   padding-top: 60px;
   align-items: center;
+  margin-bottom: 31px;
+  margin-left: 13px;
 }
 
 .button-subscribe-form {
@@ -1232,7 +1274,7 @@ background: #FFCC33;
 .subscribe-form-is-free {
   margin: 0;
   padding: 0;
-  margin-left: 188px;
+  margin-left: 181px;
 }
 
 /*second pade*/
@@ -1311,6 +1353,7 @@ background: #FFCC33;
 .catalog-product-container {
   background: #F0F0F0;
   margin: 0 auto;
+  padding-bottom: 70px;
 }
 
 .catalog-product {
@@ -1832,7 +1875,6 @@ background: #FFCC33;
 .product-card {
   position: relative;
   background: #FFFFFF;
-  display: inline-block;
  }
 
  .product-card-container {
@@ -1916,8 +1958,9 @@ background: #FFCC33;
   grid-template-columns: 360px 360px;
   list-style-type: none;
   padding: 0;
+  margin: 0;
   gap: 44px 40px;
-  margin: 70px 40px 44px 40px;
+  padding: 78px 40px;
 }
 
 .product-link {
@@ -2086,7 +2129,7 @@ background: #FFCC33;
 /*footer*/
 
 .footer-contacts {
- margin-top: 137px;
+ margin-top: 135px;
 }
 
 .footer-page {
@@ -2148,20 +2191,21 @@ background: #FFCC33;
 }
 
 .footer-adress-conteiner {
-  margin-top: 35px;
+  margin-top: 28px;
 }
 
 .logo-adress-container {
+  margin-left: -10px;
   position: relative;
   width: 250px;
-  margin-top: 62px;
+  margin-top: 59px;
 }
 
 .logo-adress-container::after {
   content: '';
   position: absolute;
   width: 80px;
-  top: 182px;
+  top: 176px;
   left: 0;
   border-top: 7px solid #FFC700;
 }
@@ -2188,6 +2232,7 @@ background: #FFCC33;
  margin: 0;
  padding: 0;
  margin-top: 62px;
+ margin-left: 25px;
 }
 
 .footer-sotial-item {
@@ -2199,13 +2244,21 @@ background: #FFCC33;
 }
 
 .footer-contacts-phone {
-  margin-top: 140px;
-  margin-bottom: 63px;
+  margin-top: 130px;
+  margin-bottom: 60px;
 }
 
 .footer-navigation-item {
-  margin-left: 35px;
+  margin-left: 21px;
+  margin-right: 11px;
   list-style: none;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .footer-sotial-button {
@@ -2233,6 +2286,7 @@ background: #FFCC33;
 
 .footer-logo-htmlacademy {
   fill: #FFC700;
+
 }
 
 .footer-logo-htmlacademy:hover svg {
@@ -2246,4 +2300,8 @@ background: #FFCC33;
 .footer-logo-htmlacademy:active svg {
   color: #FFC700;
   opacity: 0.3;
+}
+
+.html-academy-logo {
+  padding-left: 10px;
 }
