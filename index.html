@@ -47,10 +47,14 @@
           <nav class="main-navigation">
             <ul class="navigation-main-list">
               <li class="navigation-main-item navigation-main-item-catalog">
-                <button class="navigation-link-main navigation-link-main-left" href="catalog-product.html">
+                <a class="navigation-link-main navigation-link-main-left" href="catalog-product.html">
                   <span class="navigation-link-main navigation-link-main-left">Каталог Товаров</span>
-                <button class="navigation-circle-button"></button>
-                <ul class="subcatalog">
+                <a class="navigation-circle-button">
+                  <svg class="navigation-circle-svg" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                  </svg>
+                </a>
+                <ul class="subcatalog subcatalog-hide">
                   <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Виртуальная реальность</a>
                   </li>
                   <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Фитнес-браслеты</a></li>
@@ -61,7 +65,6 @@
                       часы</a></li>
                   <li class="subcatalog-item"><a class="subcatalog-item-link style-1" href="#">Экшн-камеры</a></li>
                 </ul>
-                </button>
               </li>
               <li class="navigation-main-item">
                 <a class="navigation-link-main navigation-link-main-right" href="delivery.html">Доставка</a>
@@ -216,8 +219,8 @@
       <div class="slider-servise-container">
         <section class="slider-service">
           <ul class="slider-service-list">
-            <li class="slider-service-item">
-              <button class="slider-service-button">Доставка</button>
+            <li class="slider-service-item slider-service-item-choose">
+              <button class="slider-service-button slider-service-button-choose">Доставка</button>
             </li>
             <li class="slider-service-item">
               <button class="slider-service-button">Гарантия</button>
