@@ -17,10 +17,12 @@
           </a>
         <!--Навигация-->
         <div class="header-navigation">
-          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <input name="search-form-signature" placeholder="Поиск по сайту">
-            <button class="button-search-form" type="button">Найти</button>
+          <div class="navigation-item-hidden header-search">
+          <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="get">
+            <input class="search" type="search" placeholder="Поиск по сайту">
+            <button class="navigation-button" type="button">Найти</button>
           </form>
+          </div>
           <nav class="user-navigation">
             <ul class="navigation-user-list">
               <li class="navigation-user-item">
@@ -41,24 +43,37 @@
               </li>
             </ul>
           </nav>
-        </div>
-        <nav class="main-navigation">
-          <ul class="navigation-main-list">
-            <li class="navigation-main-item">
-              <a class="navigation-link-main navigation-link-main-left" href="catalog-product.html">Каталог товаров</a>
-              <button class="navigation-circle-button"></button>
-            </li>
-            <li class="navigation-main-item">
-              <a class="navigation-link-main navigation-link-main-right" href="delivery.html">Доставка</a>
-            </li>
-            <li class="navigation-main-item">
-              <a class="navigation-link-main navigation-link-main-right" href="guarantee.html">Гарантия</a>
-            </li>
-            <li class="navigation-main-item">
-              <a class="navigation-link-main navigation-link-main-right" href="contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+          </div>
+          <nav class="main-navigation">
+            <ul class="navigation-main-list">
+              <li class="navigation-main-item navigation-main-item-catalog">
+                <button class="navigation-link-main navigation-link-main-left" href="catalog-product.html">
+                  <span class="navigation-link-main navigation-link-main-left">Каталог Товаров</span>
+                <button class="navigation-circle-button"></button>
+                <ul class="subcatalog">
+                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Фитнес-браслеты</a></li>
+                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Квадрокоптеры</a></li>
+                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="catalog.html">Моноподы для
+                      селфи</a></li>
+                  <li class="subcatalog-item subcatalog-item-watch"><a class="subcatalog-item-link style-1" href="#">Умные
+                      часы</a></li>
+                  <li class="subcatalog-item"><a class="subcatalog-item-link style-1" href="#">Экшн-камеры</a></li>
+                </ul>
+                </button>
+              </li>
+              <li class="navigation-main-item">
+                <a class="navigation-link-main navigation-link-main-right" href="delivery.html">Доставка</a>
+              </li>
+              <li class="navigation-main-item">
+                <a class="navigation-link-main navigation-link-main-right" href="guarantee.html">Гарантия</a>
+              </li>
+              <li class="navigation-main-item">
+                <a class="navigation-link-main navigation-link-main-right" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
       </div>
     </header>
     <!--слайдер-->
@@ -67,9 +82,9 @@
         <h1 class="visually-hidden">Интернет-магазин мобильных гаджетов DeviSe</h1>
         <section class="slider-products">
           <div class="slider-button-circular">
-            <button class="button-circular button-circular-current" type="button"></button>
-            <button class="button-circular" type="button"></button>
-            <button class="button-circular" type="button"></button>
+            <button class="button-circular button-circular-current" type="button"><span class="visually-hidden">1 слайд</span></button>
+            <button class="button-circular" type="button"><span class="visually-hidden">2 слайд</span></button>
+            <button class="button-circular" type="button"><span class="visually-hidden">3 слайд</span></button>
           </div>
           <div class="slider">
             <ul class="slider-item">
@@ -281,13 +296,17 @@
           <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
             длительными тест-драйвами, распаковками, а также акции,
             спецпредложения и вот это вот всё.</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input name="subscribe-form-signature" placeholder="Ваш email">
+          <div class="subscribe-form-container">
+          <form class="subscribe-form" action="#" method="post">
+          <label for="subscribe-form">
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
+            required></label>
             <button class="button-subscribe-form" type="button">Подписаться</button>
           </form>
           <p class="subscribe-form-is-free">
             <svg class="subscribe-form-icon" aria-hidden="true" focusable="false" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 0 4.9 9.3.5 5v4.7L5 14l9.5-9.3V0Z" fill="#08AF00"/></svg>
             Это бесплатно</p>
+          </div>
         </section>
       </div>
     </main>
