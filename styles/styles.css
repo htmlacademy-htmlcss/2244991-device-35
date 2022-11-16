@@ -1902,9 +1902,12 @@ background: #FFCC33;
 /*product-card*/
 
 .product-card-section {
-  position: relative;
   background: #FFFFFF;
   padding-bottom: 70px;
+ }
+
+ .product-card {
+  position: relative;
  }
 
  .product-card-container {
