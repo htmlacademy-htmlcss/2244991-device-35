@@ -183,6 +183,7 @@ right: 5px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
 }
 
 .navigation-user-item:nth-child(1) {
@@ -228,9 +229,17 @@ right: 5px;
 }
 
 .navigation-user-item {
-  margin-right: 20px;
-  margin-left: 31px;
+  margin-right: 27px;
+  margin-left: 26px;
   margin-top: 6px;
+}
+/*временные отступы для второй страницы - навигация*/
+.navigation-user-item-name,
+.navigation-user-item-exit,
+.navigation-user-item-compare,
+.navigation-item-basket {
+  margin-right: 5px;
+  margin-left: 9px;
 }
 
 .navigation-user-item:nth-child(3) {
@@ -2675,11 +2684,6 @@ background: #FFCC33;
 .navigation-item-exit {
   margin-right: 0;
   margin-left: 0;
-}
-
-
-.navigation-item-compare {
-  margin-right: 8px;
 }
 
 .popover {
