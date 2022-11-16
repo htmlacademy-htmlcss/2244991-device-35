@@ -19,16 +19,16 @@
         </div>
         <!--Навигация-->
         <div class="header-navigation">
-          <div class="navigation-item-hidden header-search">
+          <div class="navigation-item-hidden">
             <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="search" type="search" placeholder="Поиск по сайту">
-              <button class="navigation-button" type="button">Найти</button>
+              <input class="search navigation-search" type="search" placeholder="Поиск по сайту">
+              <button class="navigation-button navigation-button-search" type="button">Найти</button>
             </form>
           </div>
           <nav class="user-navigation">
             <ul class="navigation-user-list">
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">
+              <li class="navigation-user-item navigation-user-item-2page">
+                <a class="navigation-link-user navigation-user-name" href="#">
                   <svg class="navigation-icon" aria-hidden="true" focusable="false" width="13" height="12"
                     viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -36,10 +36,12 @@
                       fill="#000" />
                   </svg>
                   Коля Петухов</a>
-                <button class="button-user-navigation"> Выйти</button>
               </li>
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">
+              <li class="navigation-user-item navigation-user-item-2page">
+                <a class="navigation-link-user button-user-navigation navigation-link-user-out" href="#">Выйти</a>
+              </li>
+              <li class="navigation-user-item  navigation-user-item-2page">
+                <a class="navigation-link-user navigation-link-user-compare" href="#">
                   <svg class="navigation-icon" aria-hidden="true" focusable="false" width="10" height="12"
                     viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#a)" fill="#000">
@@ -52,26 +54,55 @@
                     </defs>
                   </svg>
                   Сравнить</a>
-              </li>
-              <li class="navigation-user-item">
-                <a class="navigation-link-user" href="#">
-                  <span class="navigation-icon-number">2</span>
-                  <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="14"
-                    viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a)">
-                      <path
-                        d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"
-                        fill="#000" />
-                    </g>
-                    <defs>
-                      <clipPath id="a">
-                        <path fill="#fff" d="M0 0h16v14H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
+                </li>
+
+              <li class="navigation-user-item navigation-item  navigation-item-basket navigation-user-item-2page">
+                <a class="navigation-link-user navigation-basket-link style-1 navigation-basket" href="#">
+                  <span class="navigation-icon-number navigation-icon-number-2page">2</span>
+                <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>
                   Корзина</a>
+                <div class="popover popover-cart">
+                  <div class="popover-content">
+                    <h2 class="popover-title visually-hidden">Корзина</h2>
+                    <ul class="cart-items-list">
+                      <li class="cart-item">
+                        <a class="cart-item-container style-1" href="#">
+                          <img class="cart-item-image" src="images/amateur-selfie-stick.jpg" width="39" height="43"
+                            alt="Любительская селфи-палка">
+                          <span class="cart-item-title">Любительская селфи-палка</span>
+                        </a>
+                        <button type="button" class="cart-item-button style-1"></button>
+                      </li>
+                      <li class="cart-item">
+                        <a class="cart-item-container  style-1" href="#">
+                          <img class="cart-item-image" src="images/professional-selfie-stick.jpg" width="39" height="43" alt="Профессиональная
+                           селфи-палка">
+                          <span class="cart-item-title">Профессиональная
+                            селфи-палка</span>
+                        </a>
+                        <button type="button" class="cart-item-button style-1"></button>
+                      </li>
+                    </ul>
+                    <div class="cart-price-box-container">
+                      <div class="cart-price-box">
+                        <div class="cart-price-subbox">Товаров:
+                          <span class="cart-price-subbox-value">2</span>
+                        </div>
+                        <div class="cart-price-subbox">Сумма:
+                          <span class="cart-price-subbox-value">2000 ₽</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popover-open-basket">
+                      <button class="popover-open-basket-button" type="button">открыть корзину</button>
+                    </div>
+                  </div>
+                </div>
+                <svg class="polygon-for-popover" aria-hidden="true" focusable="false" width="14px" height="6px" viewBox="0 0 14 6">
+                  <polygon points="0,6 7,0 14,6" fill="color" />
+                </svg>
               </li>
-            </ul>
+              </ul>
           </nav>
         </div>
         <nav class="main-navigation">
@@ -79,24 +110,22 @@
             <li class="navigation-main-item navigation-main-item-catalog">
               <a class="navigation-link-main navigation-link-main-left" href="catalog-product.html">
                 <span class="navigation-link-main navigation-link-main-left">Каталог Товаров</span>
-                <a class="navigation-circle-button">
-                  <svg class="navigation-circle-svg" aria-hidden="true" focusable="false" width="16" height="16"
-                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black" />
-                  </svg>
-                </a>
-                <ul class="subcatalog subcatalog-hide">
-                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Фитнес-браслеты</a></li>
-                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Квадрокоптеры</a></li>
-                  <li class="subcatalog-item"><a class="subcatalog-item-link" href="catalog.html">Моноподы для
-                      селфи</a></li>
-                  <li class="subcatalog-item subcatalog-item-watch"><a class="subcatalog-item-link style-1"
-                      href="#">Умные
-                      часы</a></li>
-                  <li class="subcatalog-item"><a class="subcatalog-item-link style-1" href="#">Экшн-камеры</a></li>
-                </ul>
+              <a class="navigation-circle-button">
+                <svg class="navigation-circle-svg" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                </svg>
+              </a>
+              <ul class="subcatalog subcatalog-hide">
+                <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Фитнес-браслеты</a></li>
+                <li class="subcatalog-item"><a class="subcatalog-item-link" href="#">Квадрокоптеры</a></li>
+                <li class="subcatalog-item"><a class="subcatalog-item-link" href="catalog.html">Моноподы для
+                    селфи</a></li>
+                <li class="subcatalog-item subcatalog-item-watch"><a class="subcatalog-item-link style-1" href="#">Умные
+                    часы</a></li>
+                <li class="subcatalog-item"><a class="subcatalog-item-link style-1" href="#">Экшн-камеры</a></li>
+              </ul>
             </li>
             <li class="navigation-main-item">
               <a class="navigation-link-main navigation-link-main-right" href="delivery.html">Доставка</a>
@@ -122,7 +151,7 @@
               <a class="breadcrumbs-link" href=""> Главная</a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="">Каталог</a>
+              <a class="breadcrumbs-link" href="">Каталог товаров</a>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Моноподы для селфи</a>
@@ -415,7 +444,7 @@
         </section>
         <div class="footer-phone-logo-conteiner">
           <address class="footer-contacts-phone">
-            <a class="footer-contacts-phone-link" href="tel:88128121212">+7 (812) 812-12-12</a>
+            <a class="footer-contacts-phone-link" href="tel:88128121212">Тел:+7 (812) 812-12-12</a>
           </address>
           <a class="footer-logo-htmlacademy" href="https://htmlacademy.ru/">
             <svg class="html-academy-logo" aria-hidden="true" focusable="false" width="115" height="33"
