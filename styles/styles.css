@@ -70,7 +70,7 @@ body {
   position: relative;
   width: 1160px;
   margin: 40px auto 0;
-  padding: 46px 60px 0;
+  padding: 46px 58px 0;
   background-color: #FFE17F;
 }
 
@@ -190,14 +190,16 @@ right: 5px;
   min-width: 193px;
 }
 
-.navigation-user-item-2page:nth-child(1) {
+.navigation-user-item-catalog:nth-child(1) {
   min-width: 0;
+  margin-left: 26px;
 }
 
 .navigation-main-item:nth-child(1) {
  margin-right: auto;
  padding-left: 0;
 }
+
 
 .navigation-circle-button {
   position: relative;
@@ -229,17 +231,25 @@ right: 5px;
 }
 
 .navigation-user-item {
-  margin-right: 27px;
-  margin-left: 26px;
-  margin-top: 6px;
+  margin-right: 24px;
+  margin-left: 28px;
+  margin-top: 7px;
 }
-/*временные отступы для второй страницы - навигация*/
+
+.navigation-user-item-catalog {
+  margin-top: 4px;
+}
+
 .navigation-user-item-name,
 .navigation-user-item-exit,
 .navigation-user-item-compare,
 .navigation-item-basket {
-  margin-right: 5px;
-  margin-left: 9px;
+  margin-right: 15px;
+  margin-left: 5px;
+}
+
+.navigation-item-basket {
+  margin-left: 32px;
 }
 
 .navigation-user-item:nth-child(3) {
@@ -258,11 +268,6 @@ right: 5px;
 .navigation-link-user-out {
   margin: 0;
   padding: 0;
-}
-
-.navigation-user-item-2page {
-  margin-left: 7px;
-  margin-top: 6px;
 }
 
 .navigation-link-user {
@@ -427,7 +432,7 @@ right: 5px;
   margin-bottom: 70px;
   display: grid;
   margin-top: -16px;
-  position: inherit;
+  position: relative;
 }
 
 .slider {
@@ -491,8 +496,8 @@ right: 5px;
 .slider-button-circular {
   margin: 0 auto;
   position: absolute;
-  left: 828px;
-  bottom: 217px;
+  left: 530px;
+  bottom: -5px;
 }
 
 .button-circular:hover {
@@ -1376,7 +1381,7 @@ background: #FFCC33;
 .catalog-product-container {
   background: #F0F0F0;
   margin: 0 auto;
-  padding-bottom: 82px;
+  padding-bottom: 12px;
 }
 
 .catalog-product {
@@ -1896,9 +1901,10 @@ background: #FFCC33;
 
 /*product-card*/
 
-.product-card {
+.product-card-section {
   position: relative;
   background: #FFFFFF;
+  padding-bottom: 70px;
  }
 
  .product-card-container {
