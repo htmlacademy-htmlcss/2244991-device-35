@@ -380,6 +380,82 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-hide">
+      <form class="modal-subcontainer" action="https://echo.htmlacademy.ru/" method="post">
+
+        <div class="modal modal-order">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <button class="modal-close-button" type="button">
+            <span class="visually-hidden">закрытие окна заказа товаров</span>
+          </button>
+          <label class="your-name label-modal-style">
+            <span class="visually-hidden">поле ввода вашего имени</span><span class="modal-title-input">Ваше имя:</span>
+            <input class="input-modal-style input-modal-style-name" type="text" id="input-modal-style-name" required
+              placeholder="Введите имя">
+
+          </label>
+
+          <label class="your-email label-modal-style">
+            <span class="visually-hidden">поле ввода вашего емэйла</span><span class="modal-title-input">Ваш
+              e-mail:</span>
+            <input class="input-modal-style input-modal-style-email" type="email" id="input-modal-style-email" required
+              placeholder="Введите e-mail">
+            <span class="error-text">Забавный у вас адрес</span>
+          </label>
+
+          <label class="your-order label-modal-style"><span class="visually-hidden">введите наименование товара для
+              заказа</span><span class="modal-title-input">Что нужно привезти:</span>
+            <input class=" input-modal-style" type="text" id="input-modal-style" required
+              placeholder="В свободной форме">
+          </label>
+
+          <div class="count-label label-modal-style"><span class="modal-title-input for-tooltip-icon">Количество:<span
+                class="tooltip"><button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"><svg
+                    class="attention-tooltip" aria-hidden="true" focusable="false" width="2" height="12"
+                    viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#d)" fill="#000">
+                      <path d="M2 0H0v2h2V0ZM2 4H0v8h2V4Z" />
+                    </g>
+                    <defs>
+                      <clipPath id="d">
+                        <path fill="#fff" d="M0 0h2v12H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg></button>
+                <span class="container-svg-span-modal"><svg class="polygon-for-tooltip-text" aria-hidden="true"
+                    focusable="false" width="14px" height="6px" viewBox="0 0 14 6">
+                    <polygon points="0,6 7,0 14,6" fill="color" />
+                  </svg><span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько
+                    нужно. Привезём сколько получится
+                    по требованиям
+                    к провозу багажа.</span></span>
+              </span></span>
+            <div class="count-label-box">
+              <button class="minus-count button-count count-style" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="2" fill="none" viewBox="0 0 16 2">
+                  <path fill="#000" d="M16 0H0v2h16V0Z" />
+                </svg><span class="visually-hidden">уменьшение колличества выбранного товара</span></button>
+              <label class="count-input-container" for="count-input"><span class="visually-hidden">колличество
+                  выбранного
+                  товара</span></label><input class="count-input input-modal-style count-style" type="number" min="1"
+                id="count-input" value="1">
+              <div class="count-for-outline"></div>
+              <button class="plus-count button-count count-style" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="none" viewBox="0 0 16 16">
+                  <path fill="#000" d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" />
+                </svg><span class="visually-hidden">увеличение колличества выбранного товара</span></button>
+            </div>
+          </div>
+
+          <button class="button-popover-submit button-popover" type="submit"><span
+              class="button-popover-submit-span">отправить</span></button>
+        </div>
+
+
+      </form>
+    </div>
+
   </body>
 
 </html>
