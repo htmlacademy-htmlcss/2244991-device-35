@@ -38,6 +38,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-family: "Rubik", sans-serif;
+  font-style: normal;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
@@ -107,7 +108,7 @@ body {
 }
 
 .search {
-  font-family: "rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: #ffe17f;
   font-style: normal;
   font-weight: 400;
@@ -123,14 +124,19 @@ body {
   padding-left: 48px;
 }
 
-.search::placeholder{
+.search::placeholder {
   color:#000000;
+  opacity: 0.3;
 }
 
 .search:focus {
   outline: 2px solid #af4fff;
-  outline-offset: 3px;
+  outline-offset: 2px;
   z-index: 2;
+}
+
+.search:disabled {
+  opacity: 0.3;
 }
 
 .search::-webkit-inner-spin-button,
@@ -142,7 +148,7 @@ body {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   width: 160px;
-  font-family: "rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -160,9 +166,19 @@ body {
   color: #ffffff;
 }
 
-.navigation-button:focus {
+.navigation-button:active {
   background-color: #000000;
   color: #444444;
+}
+
+.navigation-button:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  z-index: 2;
+}
+
+.navigation-button:disabled {
+  opacity: 0.3;
 }
 
 .navigation-icon {
@@ -231,9 +247,14 @@ right: 5px;
 }
 
 .navigation-user-item {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
   margin-right: 24px;
-  margin-left: 28px;
-  margin-top: 7px;
+  margin-left: 29px;
+  margin-top: 4px;
 }
 
 .navigation-user-item-catalog {
@@ -332,20 +353,23 @@ right: 5px;
 
 .navigation-link-main {
   text-decoration: none;
-  text-transform: uppercase;
   color: #000000;
 }
 
 .navigation-main-item {
   display: flex;
-  font-family: "Raleway", sans-serif;
-  line-height: 21px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   background-color: #FFE17F;
   height: 50px;
   text-align: left;
   margin-right: 45px;
-  padding: 15px 0 15px 0;
+  padding: 18px 0 15px 0;
 }
 
 .navigation-main-item:nth-child(4) {
@@ -353,7 +377,7 @@ right: 5px;
 }
 
 .main-navigation {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .main-navigation-second-pade {
@@ -374,7 +398,7 @@ right: 5px;
   display: grid;
   box-sizing: border-box;
   column-gap: 28px;
-  row-gap: 6px;
+  row-gap: 15px;
   grid-template-columns: 224px 184px 180px;
   width: 1160px;
   margin: 0;
@@ -394,14 +418,27 @@ right: 5px;
 }
 
 .subcatalog-item-link {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .subcatalog-item-watch {
   grid-column: 2/4;
+}
+
+.subcatalog-item-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.subcatalog-item-link:focus:active {
+  border-bottom: 2px solid #000000;
 }
 
 .navigation-main-list-page-catalog {
@@ -568,7 +605,7 @@ right: 5px;
 .slider-text-container{
   width: 560px;
   height: 401px;
-  margin: 124px 0 0 40px;
+  margin: 123px 0 0 38px;
   padding: 0;
 }
 
@@ -585,23 +622,25 @@ right: 5px;
 
 .slider-title {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  color: #000000;
   margin: 0;
   margin-bottom: 29px;
 }
 
 .slider-title-description {
-  color: #444444;
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
+  color: #444444;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
+  margin-left: 2px;
 }
 
 /*slider link*/
@@ -626,7 +665,8 @@ right: 5px;
 .slider-selfie-stick::after {
   content: '01';
   position: absolute;
-  right: 55px;
+  right: 47px;
+  bottom: 2px;
   font-size: 180px;
   font-weight: 700;
   line-height: 180px;
@@ -648,6 +688,7 @@ right: 5px;
   font-family: 'Raleway';
   font-weight: 800;
   font-size: 18px;
+  line-height: 21px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
@@ -701,12 +742,21 @@ right: 5px;
   outline: 2px solid #AF4FFF;
 }
 
+.slider-quadrocopter-more:disabled,
+.slider-fitness-bracelet-more:disabled,
+.slider-selfie-stick-more:disabled {
+  opacity: 0.3;
+}
+
 .slider-data-number {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 36px;
   line-height: 30px;
   color: #000000;
   margin: 0;
-  margin-top: 58px;
+  margin-top: 56px;
   margin-bottom: 12px;
 }
 
@@ -725,7 +775,7 @@ right: 5px;
 }
 
 .catalog-image-link {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -776,7 +826,7 @@ right: 5px;
 }
 
 .catalog-image-link-bracelet::before {
-  background-image: url('../images/catalog/fitness-braсelet.svg');
+  background-image: url('../images/catalog/fitness-bracelet.svg');
 }
 
 .catalog-image-link-smartwatch::before {
@@ -848,19 +898,19 @@ right: 5px;
   position: relative;
   display: flex;
   justify-content: center;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   width: 160px;
   height: 40px;
   border: none;
   color: #000000;
   background-color: transparent;
   text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
   margin-bottom: 35px;
   padding: 10px 4px;
 }
@@ -911,8 +961,9 @@ right: 5px;
 }
 
 .slider-service-title {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
+  font-style: normal;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
@@ -956,7 +1007,8 @@ right: 5px;
 
 .rare-product-button {
   position: relative;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
   font-size: 20px;
   line-height: 23px;
@@ -1048,7 +1100,7 @@ right: 5px;
 }
 
 .about-us-contacts h2 {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -1102,7 +1154,7 @@ right: 5px;
   padding: 0;
   margin-top: 30px;
   margin-bottom: 15px;
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
  font-style: normal;
  font-weight: 700;
  font-size: 24px;
@@ -1124,8 +1176,11 @@ right: 5px;
 
 .button-write-to-us {
   position: relative;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0;
@@ -1133,18 +1188,19 @@ right: 5px;
   border: none;
   color: #000000;
   background-color: transparent;
-  letter-spacing: 0.2em;
 }
 
 .button-about-us {
   position: relative;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 10px 30px;
-  letter-spacing: 0.2em;
+  padding: 11px 23px;
 }
 
 .button-about-us::before,
@@ -1186,10 +1242,9 @@ background: #FFCC33;
   outline: 2px solid #AF4FFF;
 }
 
-.slider-quadrocopter-more:disabled,
-.slider-fitness-bracelet-more:disabled,
-.slider-selfie-stick-more:disabled {
-  opacity: 0.3;
+.button-about-us:disabled,
+.button-write-to-us:disabled  {
+ opacity: 0.3;
 }
 
 
@@ -1211,7 +1266,7 @@ background: #FFCC33;
 }
 
 .subscribe-title {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -1223,7 +1278,7 @@ background: #FFCC33;
   padding: 0;
   margin-top: 64px;
   margin-bottom: 144;
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 .subscribe-description {
@@ -1233,16 +1288,13 @@ background: #FFCC33;
   padding: 0;
   margin-top: 72px;
   margin-left: 244px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
   color: #444444;
 }
 
 .field {
   margin: 0;
   padding: 0 0 0 16px;
-  width: 541px;
+  width: 550px;
   height: 54px;
   outline: none;
   font: inherit;
@@ -1270,16 +1322,16 @@ background: #FFCC33;
   justify-content: start;
   min-width: 1158px;
   min-height: 57px;
-  padding-top: 60px;
+  padding-top: 67px;
   align-items: center;
   margin-bottom: 31px;
-  margin-left: 13px;
+  margin-left: 2px;
 }
 
 .button-subscribe-form {
   width: 253px;
   height: 57px;
-  font-family: "raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1295,6 +1347,20 @@ background: #FFCC33;
  color: #FFFFFF;
 }
 
+.button-subscribe-form:active {
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.button-subscribe-form:focus {
+outline: 2px solid #AF4FFF;
+}
+
+.button-subscribe-form:disabled {
+  opacity: 0.3;
+  border: 3px solid #E5E5E5;
+}
+
 .subscribe-form-icon {
   margin-right: 18px;
 }
@@ -1302,20 +1368,21 @@ background: #FFCC33;
 .subscribe-form-is-free {
   margin: 0;
   padding: 0;
-  margin-left: 181px;
+  margin-left: 185px;
 }
 
 /*second pade*/
 
 .inner-header-title {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
+  margin-top: 63px;
   margin-left: 56px;
   margin-bottom: 16px;
 }
@@ -1332,7 +1399,8 @@ background: #FFCC33;
 
 .breadcrumbs-link {
   display: block;
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1548,7 +1616,7 @@ background: #FFCC33;
   background: transparent;
   padding: 0;
   color: rgba(0, 0, 0, 0.5);
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1777,7 +1845,11 @@ background: #FFCC33;
   width: 100%;
   height: 100%;
   outline: 2px solid #AF4FFF;
-}*/
+}
+
+.button-control:disabled {
+  opacity: 0.3;
+}
 
 .catalog-right-column {
   width: 840px;
@@ -1789,16 +1861,6 @@ background: #FFCC33;
   background: #F0F0F0;
 }
 
-.celect-name {
-  margin: 0;
-  padding: 0;
-  margin-left: 40px;
-  margin-top: 25px;
-  margin-right: 206px;
-  margin-bottom: 25px;
-  letter-spacing: 0.2em;
-}
-
 .select-control-title {
   position: relative;
   margin-right: 210px;
@@ -1807,22 +1869,15 @@ background: #FFCC33;
 }
 
 .select-control {
-  margin-top: 25px;
-  margin-right: 206px;
-  margin-bottom: 25px;
-}
-
-.select-control {
-  font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
   background-color: #F0F0F0;
   color: #000000;
   border: none;
   cursor: pointer;
   outline: none;
+  margin-top: 25px;
+  margin-right: 206px;
+  margin-bottom: 25px;
 }
 
 .select-control-for-outline {
@@ -1865,11 +1920,12 @@ background: #FFCC33;
   opacity: 0.2;
 }
 
-.button-product-icon:hover {
+.button-product-icon:hover svg {
   opacity: 0.5;
 }
 
-.button-product-icon:active {
+.button-product-icon:active svg {
+  color: #000000;
   opacity: none;
 }
 
@@ -1881,17 +1937,21 @@ background: #FFCC33;
 /*sorting*/
 
 .celect-name {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
   color: #000000;
+  margin: 0;
+  padding: 0;
+  margin: 25px 206px 25px 40px;
 }
 
 .select-control {
-
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
@@ -1919,7 +1979,8 @@ background: #FFCC33;
 }
 
 .product-card-title {
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -1935,7 +1996,7 @@ background: #FFCC33;
 }
 
 .product-card-price {
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -1947,7 +2008,8 @@ background: #FFCC33;
 
 .button-product-card-show-more {
   position: relative;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
@@ -2000,7 +2062,7 @@ background: #FFCC33;
   display: none;
   color: #000000;
   text-decoration: none;
-  font-family: "raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -2022,6 +2084,27 @@ background: #FFCC33;
   min-height: 8px;
   background: #ffe17f;
   z-index: -1;
+}
+
+.product-link::after {
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 220px;
+  min-height: 8px;
+  background: #ffe17f;
+  z-index: -1;
+}
+
+.product-card-amateur:hover .product-link {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .product-card-amateur:hover .product-link {
@@ -2047,6 +2130,7 @@ background: #FFCC33;
   left: 50%;
   transform: translate(-50%);
 }
+
 .product-card-follow-me:hover .product-link {
   display: block;
   position: absolute;
@@ -2094,7 +2178,7 @@ background: #FFCC33;
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -2126,9 +2210,12 @@ background: #FFCC33;
 
 .pagination-prev {
   position: relative;
-  padding: 23px 24px 20px;
-  font-family: 'Raleway';
+  padding: 27px 24px 20px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
@@ -2151,9 +2238,12 @@ background: #FFCC33;
 }
 
 .pagination-next {
-  padding: 23px 17px 20px;
-  font-family: 'Raleway';
+  padding: 27px 18px 20px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
@@ -2206,7 +2296,6 @@ background: #FFCC33;
 
 .footer-address,
 .footer-contacts-phone-link {
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -2287,7 +2376,7 @@ background: #FFCC33;
   margin-left: 21px;
   margin-right: 11px;
   list-style: none;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -2321,19 +2410,18 @@ background: #FFCC33;
 
 .footer-logo-htmlacademy {
   fill: #FFC700;
+}
 
+.footer-logo-htmlacademy:focus  {
+  color: #FFC700;
+  outline: 1px solid #AF4FFF;
 }
 
 .footer-logo-htmlacademy:hover svg {
   fill: #FFFFFF;
 }
 
-.footer-logo-htmlacademy:focus-visible {
-  outline: 1px solid #AF4FFF;
-}
-
 .footer-logo-htmlacademy:active svg {
-  color: #FFC700;
   opacity: 0.3;
 }
 
@@ -2537,7 +2625,7 @@ background: #FFCC33;
 
 .polygon-for-tooltip-text {
   position: absolute;
-  bottom: -11px;
+  bottom: -110px;
   left: 6px;
 }
 
