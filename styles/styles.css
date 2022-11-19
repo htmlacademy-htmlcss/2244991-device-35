@@ -956,7 +956,7 @@ background-color:  rgba(0, 0, 0, 0.3);
 .slider-service::after {
   content: '';
   position: absolute;
-  left: 280px;
+  left: 279px;
   top: -102px;
   height: calc(100% + 100px);
   width: 0;
@@ -1270,7 +1270,7 @@ background-color:  rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   text-decoration: none;
   padding: 0;
-  padding: 10px 30px;
+  padding: 10px 33px;
   border: none;
   color: #000000;
   background-color: transparent;
@@ -2432,7 +2432,7 @@ outline: 2px solid #AF4FFF;
   content: '';
   position: absolute;
   width: 80px;
-  top: 176px;
+  top: 174px;
   left: 0;
   border-top: 7px solid #FFC700;
 }
