@@ -2304,6 +2304,7 @@ outline: 2px solid #AF4FFF;
 .footer-contacts {
   margin-top: 137px;
   margin-left: -6px;
+  max-width: 500px;
 }
 
 .footer-page {
@@ -2373,7 +2374,7 @@ outline: 2px solid #AF4FFF;
 
 .logo-adress-container {
   position: relative;
-  width: 250px;
+  max-width: 250px;
   margin-top: 61px;
 }
 
@@ -2397,7 +2398,7 @@ outline: 2px solid #AF4FFF;
 .footer-phone-logo-conteiner {
   position: relative;
   text-align: right;
-  width: 250px;
+  max-width: 250px;
   min-height: 116px;
   margin-bottom: 63px;
 }
