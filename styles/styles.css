@@ -104,7 +104,19 @@ body {
 }
 
 .navigation-form {
+  position: relative;
   display: flex;
+}
+
+.navigation-form::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/search.svg);
 }
 
 .search {
@@ -427,7 +439,7 @@ body {
 .subcatalog {
   position: absolute;
   top: 59px;
-  left: -60px;
+  left: -58px;
   z-index: 1;
   display: grid;
   box-sizing: border-box;
@@ -467,13 +479,19 @@ body {
   grid-column: 2/4;
 }
 
-.subcatalog-item-link:focus {
-  outline: 2px solid #AF4FFF;
+.subcatalog-item-link:hover {
+ opacity: 0.6;
 }
 
-.subcatalog-item-link:focus:active {
+.subcatalog-item-link:active {
+ opacity: 0.3;
+}
+
+.subcatalog-item-link:focus {
+  outline: 2px solid #AF4FFF;
   border-bottom: 2px solid #000000;
 }
+
 
 .navigation-main-list-page-catalog {
   padding-bottom: 20px;
@@ -554,6 +572,7 @@ body {
 }
 
 .button-circular {
+  position: relative;
   margin: 0 8px;
   width: 12px;
   height: 12px;
@@ -569,24 +588,45 @@ body {
   position: absolute;
   left: 535px;
   bottom: 14px;
+  z-index: 2;
 }
 
 .button-circular:hover {
+  border: 2px solid rgba(0, 0, 0, 0.6);
   opacity: 0.7;
 }
 
 .button-circular:active {
+  border: 2px solid rgba(0, 0, 0, 0.3)
   opacity: 0.3;
 }
 
-.button-circular:focus {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
+.button-circular:focus::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 4px + 4px);
+  height: calc(100% + 4px + 4px);
+  border: 2px solid #af4fff;
   opacity: 1;
 }
 
+.button-circular:focus {
+  outline: none;
+}
+
 .button-circular-current {
+  position: relative;
   background-color: #000000;
+}
+
+.button-circular-current:hover {
+  background-color:  rgba(0, 0, 0, 0.6);
+}
+
+.button-circular-current:active {
+background-color:  rgba(0, 0, 0, 0.3);
 }
 
 .slider-number {
@@ -639,7 +679,7 @@ body {
 .slider-text-container{
   width: 560px;
   min-height: 401px;
-  margin: 123px 0 0 42px;
+  margin: 123px 0 0 40px;
   padding: 0;
 }
 
@@ -1179,6 +1219,7 @@ body {
   height: 8px;
   border-radius: 50%;
   top: 6px;
+  left: 2px;
   background: #FFC700;
   align-items: center;
 }
@@ -1207,6 +1248,7 @@ body {
 
 .contacts-adress-text {
   margin: 0;
+  font-style: normal;
 }
 
 .contacts-schedule {
@@ -1343,7 +1385,6 @@ background: #FFCC33;
   outline: none;
   font: inherit;
   color: #444444;
-  opacity: 0.5;
   border: none;
   background: #f0f0f0;
   border-bottom: 3px solid #c4c4c4;
@@ -1358,6 +1399,16 @@ background: #FFCC33;
 .field:disabled:hover {
   opacity: 0.3;
 }
+
+.field-error:invalid:not(:placeholder-shown) {
+  border-bottom: 2px solid rgba(255, 61, 61, 1);
+}
+
+.field::placeholder {
+  color:#000000;
+  opacity: 0.3;
+}
+
 
 .subscribe-form-container {
   position: relative;
@@ -1683,7 +1734,15 @@ outline: 2px solid #AF4FFF;
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
-  margin: 0;
+}
+
+.range-input[type="number"] {
+  -moz-appearance: textfield;
+
+}
+.range-input[type="number"]:hover,
+.range-input[type="number"]:focus {
+  -moz-appearance: number-input;
 }
 
 .range-input:focus-visible + .range-input-for-outline {
@@ -1971,17 +2030,15 @@ outline: 2px solid #AF4FFF;
   opacity: 0.2;
 }
 
-.button-product-icon:hover svg {
+.button-product:hover .button-product-icon {
   opacity: 0.5;
 }
 
-.button-product-icon:active svg {
-  color: #000000;
-  opacity: none;
+.button-product:active .button-product-icon {
+  opacity: 1;
 }
 
-.button-product-icon:hover {
-  opacity: 0.2;
+.button-product:focus {
   outline: 2px solid #AF4FFF;
 }
 
@@ -2123,18 +2180,6 @@ outline: 2px solid #AF4FFF;
   z-index: 0;
 }
 
-.product-link::before {
-  content: "";
-  position: absolute;
-  left: -30%;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
-  width: 220px;
-  min-height: 8px;
-  background: #ffe17f;
-  z-index: -1;
-}
 
 .product-link::after {
   content: "";
@@ -2147,6 +2192,10 @@ outline: 2px solid #AF4FFF;
   min-height: 8px;
   background: #ffe17f;
   z-index: -1;
+}
+
+.product-link:hover::after {
+  background: #FFC700;
 }
 
 .product-card-amateur:hover .product-link {
@@ -2302,8 +2351,8 @@ outline: 2px solid #AF4FFF;
 /*footer*/
 
 .footer-contacts {
-  margin-top: 137px;
-  margin-left: -6px;
+  margin-top: 135px;
+  margin-left: -87px;
   max-width: 500px;
 }
 
@@ -2350,6 +2399,7 @@ outline: 2px solid #AF4FFF;
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+  font-style: normal;
 }
 
 .footer-contacts-phone {
@@ -2440,6 +2490,7 @@ outline: 2px solid #AF4FFF;
 }
 
 .footer-sotial-button {
+  position: relative;
   display: flex;
   justify-content: center;
   width: 40px;
@@ -2459,10 +2510,24 @@ outline: 2px solid #AF4FFF;
 }
 
 .footer-sotial-button:focus {
- outline: 2px solid #AF4FFF;
+ outline: none;
+}
+
+.footer-sotial-button:focus::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 4px + 4px);
+  height: calc(100% + 4px + 4px);
+  border: 2px solid #af4fff;
+  opacity: 1;
 }
 
 .footer-logo-htmlacademy {
+  display: flex;
+  justify-content: center;
+  padding-left: 54px;
   fill: #FFC700;
 }
 
@@ -2764,8 +2829,18 @@ outline: 2px solid #AF4FFF;
   z-index: 2;
 }
 
+.count-input[type="number"] {
+  -moz-appearance: textfield;
+}
+.count-input[type="number"]:hover,
+.count-input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+
 .button-count {
   cursor: pointer;
+  background-color: rgba(240, 240, 240, 1);
 }
 
 .count-input::-webkit-outer-spin-button,
@@ -2783,12 +2858,34 @@ outline: 2px solid #AF4FFF;
   width: 200px;
   background-color: rgba(255, 255, 255, 1);
   color: rgba(0, 0, 0, 1);
-  background-image: url("../images/bar-popover.svg");
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 200px 8px;
   cursor: pointer;
 }
+
+.button-popover-submit::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 8px;
+  width: 100%;
+  background-color:  #FFE17F;
+}
+
+.button-popover-submit:hover::after {
+  height: 100%;
+  background-color:  #FFE17F;
+}
+
+.button-popover-submit:active::after {
+  height: 100%;
+  background-color: #FFC700;
+}
+
+.button-popover-submit:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 
 .button-popover-submit-span {
   font-family: "Raleway", sans-serif;
@@ -2854,7 +2951,7 @@ outline: 2px solid #AF4FFF;
 
 .polygon-for-popover {
   position: absolute;
-  top: 44px;
+  top: 35px;
   left: 29px;
   display: none;
   fill: rgba(0, 0, 0, 1);
